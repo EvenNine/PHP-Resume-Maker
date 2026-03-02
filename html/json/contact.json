@@ -1,0 +1,23 @@
+{
+  "name": {
+    "first": "First Name",
+    "last": "Last Name"
+  },
+  "headline": "Professional Title",
+  "contact": {
+    "email": "Example@domain.com",
+    "phone": "(###) ###-####",
+    "location": {
+      "city": "CityVille",
+      "state": "New York",
+      "zip": "11111"
+    }
+  },
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/EvenNine"
+    }
+  ],
+  "aboutme": "Example About me :D"
+}

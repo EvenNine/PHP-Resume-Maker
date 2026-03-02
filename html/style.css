@@ -1,0 +1,285 @@
+/* Global Reset */
+* { box-sizing: border-box; }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Center the entire resume and remove giant side dead space */
+.page{
+    max-width: 980px;          /* adjust if you want narrower/wider */
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 24px;
+    border-bottom: 2px solid #11A611;
+    background: white;
+    border-radius: 10px;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.colored { color: #11A611; margin: 0; }
+.noncolored { margin: 0; }
+
+/* =========================
+ *  TWO-COLUMN STACK LAYOUT
+ *  (Fixes the gap: columns stack independently)
+ *  ========================= */
+.two-col{
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.col-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.col-right{
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* SECTION BOX */
+section {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* LISTS */
+ul {
+    padding-left: 20px;
+    list-style-type: square;
+    margin: 10px 0 0 0;
+}
+
+/* =========================
+ *  SKILLS BLOCK (New Schema)
+ *  ========================= */
+
+.skills-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skill-item{
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-title-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.skill-title{
+    font-weight: 650;
+    font-size: 0.95rem;
+    line-height: 1.2;
+}
+
+.skill-years{
+    font-size: 0.82rem;
+    color: #666;
+    white-space: nowrap;
+}
+
+.skill-specifics{
+    margin-top: 3px;
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.25;
+}
+
+/* Optional: tighter left-column section headings */
+.col-left section h2{
+    margin-top: 0;
+}
+
+/* JOB STYLING */
+.job { margin-bottom: 16px; }
+
+.small-indented {
+    margin-left: 4%;
+    font-size: 0.9rem;
+    color: #808080;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.paragraph-text {
+    margin-left: 4%;
+    margin-top: 0;
+}
+
+/* JOB SKILL TAG "CHIPS" (small boxes under each job) */
+.job-skill-tags{
+    margin-left: 4%;
+    margin-top: 6px;
+
+    display: flex;
+    flex-wrap: nowrap;        /* keep to one line */
+    gap: 6px;
+
+    overflow: hidden;         /* if there are lots of tags, keep it clean */
+}
+
+.job-skill-tag{
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid #11A611;
+    border-radius: 999px;
+    background: #f6fff6;
+    color: #0b6d0b;
+
+    font-size: 0.78rem;
+    line-height: 1.6;
+
+    /* The key: allow them to SHRINK to avoid wrapping */
+    flex: 1 1 0;
+    max-width: 140px;         /* your “fixed maximum” */
+    min-width: 0;             /* allows ellipsis to work in flex */
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Centered Projects box */
+.central-box{
+    margin: 20px auto 0 auto;
+    max-width: 820px;         /* keeps it centered and not “full span” */
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: white;
+    margin-top: 28px;
+    border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .two-col { flex-direction: column; }
+
+    header{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .central-box{
+        max-width: 100%;
+    }
+}
+
+/* =========================
+ *  PRINT STYLES (A4 RESUME)
+ *  ========================= */
+@media print {
+
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 11pt;
+        line-height: 1.4;
+        margin: 0;
+    }
+
+    .page{
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        border-bottom: 2px solid black;
+        padding: 0 0 10px 0;
+        margin-bottom: 15px;
+        background: transparent;
+        border-radius: 0;
+    }
+
+    /* keep the "no gap" layout but make it print as true columns */
+    .two-col{
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        gap: 15px;
+        align-items: start;
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    section {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .central-box{
+        max-width: none;
+        margin: 0 0 15px 0;
+        padding: 0;
+        border: none;
+    }
+
+    footer { display: none; }
+
+    h1 {
+        font-size: 22pt;
+        margin-bottom: 4px;
+    }
+
+    h2 {
+        font-size: 14pt;
+        border-bottom: 1px solid #000;
+        padding-bottom: 4px;
+        margin-top: 10px;
+    }
+
+    .job { margin-bottom: 10px; }
+
+    .job-skill-tags{
+        margin-top: 4px;
+        gap: 5px;
+    }
+
+    .job-skill-tag{
+        border: 1px solid #000;
+        background: transparent;
+        color: #000;
+        font-size: 9pt;
+    }
+}

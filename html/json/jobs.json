@@ -1,0 +1,58 @@
+{
+  "jobs": [
+    {
+      "company": "Example Job 1",
+      "title": "Example Title 1",
+      "start": "2024-05",
+      "end": "2025-10",
+      "location": "Example Location",
+      "description": "Example Description",
+      "highlights": [
+        "Highlighted bulletpoint 1",
+        "Highlighted bulletpoint 2",
+        "Highlighted bulletpoint 3"
+      ],
+      "skills": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ]
+    },
+    {
+      "company": "Example Job 2",
+      "title": "Example Title 2",
+      "start": "2024-05",
+      "end": "2025-10",
+      "location": "Example Location",
+      "description": "Example Description",
+      "highlights": [
+        "Highlighted bulletpoint 1",
+        "Highlighted bulletpoint 2",
+        "Highlighted bulletpoint 3"
+      ],
+      "skills": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ]
+    },
+    {
+      "company": "Example Job 3",
+      "title": "Example Title 3",
+      "start": "2024-05",
+      "end": "2025-10",
+      "location": "Example Location",
+      "description": "Example Description",
+      "highlights": [
+        "Highlighted bulletpoint 1",
+        "Highlighted bulletpoint 2",
+        "Highlighted bulletpoint 3"
+      ],
+      "skills": [
+        "Skill 1",
+        "Skill 2",
+        "Skill 3"
+      ]
+    }
+  ]
+}

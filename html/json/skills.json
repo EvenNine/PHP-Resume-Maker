@@ -1,0 +1,45 @@
+{
+  "skills": [
+    {
+      "name": "Example Skill 1",
+      "years": 20,
+      "focused": true,
+      "specifics": [
+        "Specifics 1",
+        "Specifics 2"
+      ]
+    },
+    {
+      "name": "Example Skill 2",
+      "years": 1,
+      "focused": false,
+      "specifics": []
+    },
+    {
+      "name": "Example Skill 3",
+      "years": 4,
+      "focused": false,
+      "specifics": [
+        "Specifics"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "title": "Example Experience",
+      "years": 6
+    },
+    {
+      "title": "Example 2",
+      "years": 5
+    },
+    {
+      "title": "Example 3",
+      "years": 3
+    },
+    {
+      "title": "Example 4",
+      "years": 3
+    }
+  ]
+}

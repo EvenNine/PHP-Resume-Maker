@@ -1,0 +1,21 @@
+{
+  "projects": [
+    {
+      "name": "This Resume",
+      "type": "Personal",
+      "start": "2026-03",
+      "end": null,
+      "summary": "This resume was designed with a custom data-driven resume generation system using PHP and structured JSON data sources. To assist with this process I built a Python (PyQt) management tool to edit and validate JSON schema across platforms.",
+      "stack": [
+        "Python",
+        "PHP",
+        "CSS"
+      ],
+      "highlights": [
+        "This is a place to highligh specifics about your resume"
+      ],
+      "links": [],
+      "what_i_learned": []
+    }
+  ]
+}
