@@ -21,11 +21,8 @@ from PyQt6.QtWidgets import (
     QMessageBox,
 )
 
-# ====== CONFIG: hard-coded output file path ======
-OUTPUT_PATH = os.path.abspath("/home/evennine/Development/Webdev/Resume/html/json/contact.json")
+OUTPUT_PATH = os.path.abspath("~/test/json")
 # Example:
-# OUTPUT_PATH = "/home/evennine/profile.json"
-
 
 def build_payload(values: dict[str, str]) -> dict[str, Any]:
     links = []
@@ -226,4 +223,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+
     main()
